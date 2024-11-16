@@ -1,6 +1,6 @@
-# newlogic
+# Testovací projekt
 
-This template should help get you started developing with Vue 3 in Vite.
+Zde příklad využití tailwindcss spolu s UI knihovnou winduum
 
 ## Recommended IDE Setup
 

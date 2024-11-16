@@ -1,6 +1,9 @@
 <script setup lang="ts">
 import { RouterLink, RouterView, useRoute } from 'vue-router';
 import { computed } from 'vue';
+import { ChevronRightIcon, Cog6ToothIcon, DocumentCheckIcon, ShoppingBagIcon, ShoppingCartIcon } from '@heroicons/vue/24/outline'
+import UserHeader from './components/UserHeader.vue';
+
 const route = useRoute();
 
 // Získání názvu aktuální položky z parametrů
@@ -10,24 +13,47 @@ const currentPageName = computed(() => route.meta.title || 'Ahoj');
 </script>
 
 <template>
-  <div class="w-full h-full  min-h-screen p-3  md:px-6 md:py-4 lg:p-9 bg-stone-200">
-    <h1 class="text-2xl w-full mx-auto max-w-7xl">{{ currentPageName }}</h1>
-    <main class="w-full mx-auto h-full max-w-7xl flex flex-col py-8 gap-3 xs:flex-row xs:gap-4 md:gap-8">
-      <header class="h-fit w-full md:max-w-80 bg-white rounded-lg xs:rounded-2xl xs:max-w-52">
-        <nav class="w-full flex gap-4 xs:gap-8 items-center justify-start px-4 py-2 xs:px-6 xs:py-8 xs:flex-col">
-          <RouterLink class="transition-colors hover:text-blue-400" to="/">Home</RouterLink>
+  <div class="bg-stone-200 md:px-6 md:py-4 p-3 lg:p-9 w-full h-full min-h-screen">
+    <h1 class="mx-auto w-full max-w-7xl font-semibold text-3xl text-neutral-900 leading-10">{{ currentPageName }}</h1>
+    <main class="flex md:flex-row flex-col gap-3 md:gap-8 md:gap-4 mx-auto py-8 w-full max-w-7xl h-full">
+      <header class="flex-grow-0 flex-shrink md:gap-3 bg-white px-4 md:px-6 py-2 md:py-8 rounded-lg md:rounded-2xl min-w-72 min-w-max h-fit">
+        <UserHeader class="mb-6"/>
+        <nav class="flex md:flex-col justify-between justify-start items-center items-center md:items-stretch gap-4 w-full"
+          aria-label="Hlavní navigace">
           <RouterLink
-            class="transition-colors ease-out duration-500 hover:text-blue-400 hover:ease-in hover:duration-200"
-            to="/about">About</RouterLink>
+            class="w-fit md:w-full x-button"
+            to="/" aria-label="Moje objednávky">
+            <ShoppingBagIcon class="size-5" />
+            <span class="md:block hidden">Moje objednávky</span>
+            <ChevronRightIcon class="md:block hidden ml-auto size-5" />
+          </RouterLink>
+          <RouterLink class="w-fit md:w-full x-button" to="/invoices" aria-label="Faktury">
+            <DocumentCheckIcon class="size-5" />
+            <span class="md:block hidden">Faktury</span>
+            <ChevronRightIcon class="md:block hidden ml-auto size-5" />
+          </RouterLink>
+          <RouterLink class="w-fit md:w-full x-button" to="/account-settings" aria-label="Nastavení účtu">
+            <Cog6ToothIcon class="size-5" />
+            <span class="md:block hidden">Nastavení účtu</span>
+            <ChevronRightIcon class="md:block hidden ml-auto size-5" />
+          </RouterLink>
+
+          <a href="#" class="bg-red-600/10 hover:bg-red-600/50 mt-2 font-normal text-base text-red-500 hover:text-white x-button">Odhlásit se</a>
         </nav>
       </header>
-      <RouterView class="w-full flex-grow min-h-50dvh px-4 py-2 xs:p-5 md:p-6 bg-white rounded-lg xs:rounded-2xl" />
+      <router-view v-slot="{ Component }">
+        <transition name="slide" mode="out-in">
+          <keep-alive>
+          
+            <div class="flex-grow bg-white px-4 py-2 md:p-6 md:p-5 rounded-lg md:rounded-2xl w-full min-h-50dvh"
+              :key="$route.path">
+              <component :is="Component" />
+            </div>
+          </keep-alive>
+        </transition>
+      </router-view>
     </main>
   </div>
 </template>
 
-<style scoped>
-body {
-  background: #FAFAFA;
-}
-</style>
+<style scoped></style>

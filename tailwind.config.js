@@ -1,6 +1,9 @@
 /** @type {import('tailwindcss').Config} */
+import winduum from 'winduum/plugin'
+
 export default {
   content: [
+    './node_modules/winduum/src/**/*.js',
     "./index.html",
     "./src/**/*.{vue,js,ts,jsx,tsx}",
   ],
@@ -10,8 +13,13 @@ export default {
         '50dvh': '50dvh', // Přidání vlastní hodnoty min-height 50dvh
       },
       screens: {
-        xs: {min:'28rem'},}
+        xs: { min: '28rem' },
+      }
     },
   },
-  plugins: [],
+  plugins: [
+    winduum({
+        // config options
+    })
+  ],
 }

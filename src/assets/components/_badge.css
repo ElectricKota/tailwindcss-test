@@ -1,0 +1,10 @@
+.x-badge {
+    --x-badge-block-size: auto;
+    --x-badge-padding-block: .25rem;
+    --x-badge-padding-inline: .5rem;
+    --x-badge-border-radius: .25rem;
+    --x-badge-font-size: 0.75rem;
+    --x-badge-font-weight: 500;
+    --x-badge-background-color:  #DCFCE7;
+    --x-badge-color:  var(--color-green-700, #15803D);;
+}

@@ -4,13 +4,18 @@
 @import "winduum/src/components/button/index.css" layer(components);
 @import "winduum/src/utilities/index.css" layer(components);
 @import "winduum/tailwindcss/base/defaults.css";
+@import "winduum/src/components/badge/index.css" layer(components);
+@import "winduum/src/components/link/index.css" layer(components);
 @import "tailwindcss/base.css";
 @import "tailwindcss/components.css";
 @import "tailwindcss/utilities.css";
 @import "tailwindcss/variants.css";
 @import 'components/transitions.css';
 @import 'components/btn.css';
-
+@import 'components/_badge.css';
+:root {
+    --color-main-primary: #3B82F6;
+}
 body {
     font-family: 'Inter', Verdana, Geneva, Tahoma, sans-serif;
 }

@@ -6,6 +6,7 @@
 @import "winduum/tailwindcss/base/defaults.css";
 @import "winduum/src/components/badge/index.css" layer(components);
 @import "winduum/src/components/link/index.css" layer(components);
+@import "winduum/src/components/pagination/index.css" layer(components);
 @import "tailwindcss/base.css";
 @import "tailwindcss/components.css";
 @import "tailwindcss/utilities.css";

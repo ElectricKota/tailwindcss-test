@@ -1,0 +1,14 @@
+.x-control {
+    --x-control-background-color:white;
+    --x-control-invalid-background-color: white;
+    --x-check-size: 0;
+    --x-control-color: #171717;
+    &:has(:user-invalid) {
+        .x-label {
+            color: #171717;
+        }
+    }
+}
+.x-info {
+    display: none;
+}

@@ -1,18 +1,23 @@
 @import 'tailwind';
 @import "winduum/src/base/index.css";
 @import "winduum/src/theme/index.css";
+@import 'components/btn.css';
+@import 'components/form.css';
 @import "winduum/src/components/button/index.css" layer(components);
 @import "winduum/src/utilities/index.css" layer(components);
 @import "winduum/tailwindcss/base/defaults.css";
 @import "winduum/src/components/badge/index.css" layer(components);
 @import "winduum/src/components/link/index.css" layer(components);
 @import "winduum/src/components/pagination/index.css" layer(components);
+@import "winduum/src/components/field/index.css" layer(components);
+@import "winduum/src/components/control/index.css" layer(components);
+@import "winduum/src/components/check/index.css" layer(components);
+@import "winduum/src/components/label/index.css" layer(components);
 @import "tailwindcss/base.css";
 @import "tailwindcss/components.css";
 @import "tailwindcss/utilities.css";
 @import "tailwindcss/variants.css";
 @import 'components/transitions.css';
-@import 'components/btn.css';
 @import 'components/_badge.css';
 :root {
     --color-main-primary: #3B82F6;

@@ -2,8 +2,8 @@
     --color-accent: transparent;
     --color-accent-foreground: #171717;
     --x-button-block-size: 3rem;
-    --x-button-padding-block: .9rem;
-    --x-button-padding-inline: .75rem;
+    --x-button-padding-block: .75rem;
+    --x-button-padding-inline: 1.5rem;
     --x-button-font-size: 1rem;
     --x-button-font-weight: 600;
     --x-button-hover-opacity: 40%;

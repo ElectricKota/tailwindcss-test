@@ -7,13 +7,13 @@ import UserHeader from './components/UserHeader.vue';
 const route = useRoute();
 
 // Získání názvu aktuální položky z parametrů
-const currentPageName = computed(() => route.meta.title || 'Ahoj');
+const currentPageName = computed(() => route.meta.title || ' ');
 
 
 </script>
 
 <template>
-  <div class="bg-stone-200 md:px-6 md:py-4 p-3 lg:p-9 w-full h-full min-h-screen overflow-x-clip">
+  <div class="bg-stone-50 md:px-6 md:py-4 p-3 lg:p-9 w-full h-full min-h-screen overflow-x-clip">
     <h1 class="mx-auto w-full max-w-[82rem] font-medium text-[2rem] text-neutral-900 leading-10 tracking-wider">{{ currentPageName }}</h1>
     <main class="flex md:flex-row flex-col gap-10 md:gap-8 mx-auto py-8 w-full max-w-[82rem] h-full">
       <header class="lg:top-8 lg:sticky flex-grow-0 flex-shrink md:gap-3 bg-white px-4 md:px-6 py-2 md:py-8 rounded-lg md:rounded-2xl md:min-w-[304px] h-fit">

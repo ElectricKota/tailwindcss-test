@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import InvoicesView from '../views/InvoicesView.vue'
-import AccountSettingsView from '../views/AccountSettingsView.vue'
+import InvoicesView from '@/views/InvoicesView.vue'
 import FavoritesView from '@/views/OrdersView.vue'
+import AccountSettingsView from '@/views/AccountSettingsView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),

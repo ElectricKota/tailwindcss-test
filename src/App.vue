@@ -58,7 +58,7 @@ const currentPageName = computed(() => route.meta.title || ' ');
             <ChevronRightIcon class="md:block hidden ml-auto size-5" />
           </RouterLink>
 
-          <a href="#" class="bg-red-600/10 hover:bg-red-600/50 mt-2 font-normal text-base text-red-500 hover:text-white x-button">Odhlásit se</a>
+          <a href="#" class="bg-red-600/10 hover:bg-red-600/50 md:mt-2 ml-5 md:ml-0 font-normal text-base text-red-500 hover:text-white x-button">Odhlásit se</a>
         </nav>
       </header>
       <router-view v-slot="{ Component }">

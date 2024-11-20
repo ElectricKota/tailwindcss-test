@@ -3,6 +3,9 @@
     --x-control-invalid-background-color: white;
     --x-check-size: 0;
     --x-control-color: #171717;
+    /* --x-control-padding-block: 1.25rem; */
+    --x-control-block-size:3.5rem;
+    --x-control-border-radius:0.5rem;
     &:has(:user-invalid) {
         .x-label {
             color: #171717;
